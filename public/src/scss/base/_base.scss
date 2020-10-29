@@ -1,0 +1,38 @@
+*,
+*::after,
+*::before {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: inherit;
+}
+
+html {
+	font-size: 14px;
+}
+
+body {
+	box-sizing: border-box;
+}
+
+.container {
+	max-width: 1140px;
+	margin-right: auto;
+	margin-left: auto;
+	@media only screen and (max-width: 768px) {
+		width: 90%; 
+	}
+}
+.col-8 {
+	width: 75%; 
+	float: left;
+	@media only screen and (max-width: 768px) {
+		width: 100%; 
+	}
+}
+.col-4 {
+	width: 25%; 
+	float: left;
+	@media only screen and (max-width: 768px) {
+		width: 100%; 
+	}
+}

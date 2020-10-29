@@ -1,0 +1,159 @@
+
+main {
+	display: block;
+}
+
+.heading {
+	border-top: 1px solid $grey;
+	border-bottom: 1px solid $grey;
+	padding: 10px;
+	.items {
+		position: absolute;
+		min-width: 200px;
+		top: 13px;
+		left: 45%;
+		background: $greenh;
+		padding: 5px 10px;
+		text-align: center;
+		color: $white;
+		font-size: 14px;
+		font-weight: bold;
+		border-radius: 3px;
+		display: none;
+		@media only screen and (max-width: 991px) {
+	    	left: 0px;
+    		position: initial;
+	    }
+	}
+}
+
+.cart-container {
+	.content {
+		width: 31%;
+	    float: left;
+	    border: 1px solid $grey;
+	    margin: 1%;
+	    @media only screen and (max-width: 991px) {
+	    	width: 48%;
+	    }
+	    @media only screen and (max-width: 600px) {
+	    	width: 100%;
+	    }
+		.off {
+			background: $green;
+		    padding: 5px 10px;
+		    position: absolute;
+		    margin-top: 20px;
+		}
+		img {
+			padding: 20px 50px;
+		}
+		.details {
+			background: $greylight;
+			padding: 10px;
+
+			h5 {
+				font-size: 16px;
+				font-weight: bold;
+				margin-bottom: 5px;
+			}
+			.values {
+				&:after {
+					content: "";
+					display: block;
+					clear: both;
+				}
+				span {
+					font-size: 16px;
+					font-weight: bold;
+    				line-height: 26px;
+    				&.discount {
+    					color: $greytext;
+    					text-decoration: line-through;
+    					text-decoration-color: red;
+    				}
+				}
+				.addtocart {
+					float: right;
+				    border: 1px solid $blue;
+				    color: $blue;
+				    padding: 3px 5px;
+				    border-radius: 5px;
+				}
+			}
+		}
+	}
+}
+
+
+.total-price {
+	border: 2px solid $grey;
+	
+	h5, p {
+		padding: 5px 10px;
+	}
+	p {
+		.right {
+			float: right;
+		}
+	}
+	.order-total {
+		background: $greylight;
+	}
+}
+
+.total-items {
+	border-bottom: 1px solid $grey;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	ul {
+		margin: 0 0 5px;
+		padding: 0;
+		li {
+			display: inline-block;
+			width: 19%;
+			.plus, .minus, .close {
+				cursor: pointer;
+			}
+			.quantity {
+				border: 1px solid $grey;
+			    padding: 5px;
+			    margin: 5px;
+			}
+			img {
+				width: 40px;
+				height: 40px;
+				float: left;
+				margin: 5px 0;
+			}
+			&:first-child {
+				border: 1px solid $grey;
+				line-height: 40px;
+				width: 55%;
+				margin-right: 15px;
+				.title {
+					font-size: 12px;
+				    width: 60%;
+				    line-height: 13px;
+				    padding: 5px 0 0 5px;
+				    margin-top: 5px;
+				    display: inline-block;
+				}
+				.close {
+					float: right;
+					margin-right: 5px;
+				}
+			}
+			&:last-child {
+				text-align: right;
+			}
+		}
+		&:first-child {
+			li {
+				border: 0;
+				line-height: auto;
+				margin-right: 0;
+			}
+		}
+	}
+}
