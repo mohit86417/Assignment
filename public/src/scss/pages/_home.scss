@@ -13,7 +13,7 @@ main {
 		top: 13px;
 		left: 45%;
 		background: $greenh;
-		padding: 5px 10px;
+		padding: 5px 10px 10px;
 		text-align: center;
 		color: $white;
 		font-size: 14px;
@@ -79,6 +79,11 @@ main {
 				    color: $blue;
 				    padding: 3px 5px;
 				    border-radius: 5px;
+				    &:hover {
+				    	cursor: pointer;
+				    	border-color: $black;
+				    	color: $black;
+				    }
 				}
 			}
 		}
@@ -115,9 +120,12 @@ main {
 			.plus, .minus, .close {
 				cursor: pointer;
 			}
+			.plus, .minus {
+				font-size: 18px;
+			}
 			.quantity {
 				border: 1px solid $grey;
-			    padding: 5px;
+			    padding: 5px 8px;
 			    margin: 5px;
 			}
 			img {
